@@ -36,13 +36,13 @@ module.exports = function (app) {
 			differencesArray[i] = totalDifference;
 		}
 
-		var bestFriendNum = differencesArray[0];
-		var bestFriendIndex = 0;
+		var bestMatchNum = differencesArray[0];
+		var bestMatchIndex = 0;
 
 		for(var i = 1; i < differencesArray.length; i++) {
-			if(differencesArray[i] < bestFriendNum) {
-				bestFriendNum = differencesArray[i];
-				bestFriendIndex = i;
+			if(differencesArray[i] < bestMatchNum) {
+				bestMatchNum = differencesArray[i];
+				bestMatchIndex = i;
 			}
 		}
 
