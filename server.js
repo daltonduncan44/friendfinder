@@ -20,7 +20,11 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 app.use(express.static('app'));
 //======set up routing 
-require('./app/routing/apiRoutes.js')(app);
-require('./app/routing/htmlRoutes.js')(app);
+//require('./app/routing/apiRoutes.js')(app);
+//require('./app/routing/htmlRoutes.js')(app);
 
 
+// Basic route that sends the user first to the AJAX Page
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "./app/public/home.html"));
+  });
