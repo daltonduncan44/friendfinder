@@ -2,7 +2,13 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+// Sets an initial port. We"ll use this later in our listener
+var PORT = process.env.PORT || 8080;
 
+app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
+  });
+  
 var app = express();
 
 app.use(bodyParser.json());
@@ -16,4 +22,3 @@ require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
 
-app.listen(process.env.PORT || 3000);
