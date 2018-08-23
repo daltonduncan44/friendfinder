@@ -1,7 +1,11 @@
 body {
     background-color: green;
 }
+
+a{
+color:gray;
+}
 .jumbotron{
-color: red;
+
 
 }
