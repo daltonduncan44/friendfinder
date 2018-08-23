@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 8080;
 
 
 var app = express();
-
+//console log 8080 if local hosting is set up 
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
   });
@@ -19,7 +19,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 app.use(express.static('app'));
-//set up routing 
+//======set up routing 
 require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
 
